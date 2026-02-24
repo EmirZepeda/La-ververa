@@ -3,11 +3,13 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Calendar, Globe, Clock } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
 export default function LocationSection() {
     return (
         <section id="ubicacion" className="py-24 px-6 bg-cream relative overflow-hidden">
             <div className="absolute inset-0 texture-overlay" />
+            <AnimatedGradientBlobs variant="warm" opacity={0.3} />
 
             <div className="relative z-10 max-w-4xl mx-auto">
                 {/* Section Header */}

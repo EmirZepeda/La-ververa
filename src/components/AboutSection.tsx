@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Home } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
 export default function AboutSection() {
     const imageRef = useRef<HTMLDivElement>(null);
@@ -18,6 +19,7 @@ export default function AboutSection() {
     return (
         <section id="nosotros" className="py-24 px-6 bg-cream-dark relative overflow-hidden">
             <div className="absolute inset-0 texture-overlay" />
+            <AnimatedGradientBlobs variant="cool" opacity={0.4} />
 
             <div className="relative z-10 max-w-4xl mx-auto">
                 {/* Interior Image with clip-path reveal */}

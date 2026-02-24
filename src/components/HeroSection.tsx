@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ChevronDown, Leaf } from "lucide-react";
+import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
 export default function HeroSection() {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -54,6 +55,9 @@ export default function HeroSection() {
 
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-bark/40 via-bark/30 to-bark/70" />
+
+            {/* Animated color blobs */}
+            <AnimatedGradientBlobs variant="sunset" opacity={0.6} />
 
             {/* Content */}
             <motion.div

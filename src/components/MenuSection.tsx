@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 import { Star, Clock, Flame, Zap } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
 export default function MenuSection() {
     return (
         <section id="menu" className="relative py-24 px-6 overflow-hidden">
             {/* Subtle background texture */}
             <div className="absolute inset-0 texture-overlay bg-cream" />
+            <AnimatedGradientBlobs variant="warm" opacity={0.4} />
 
             <div className="relative z-10 max-w-4xl mx-auto">
                 {/* Section badge */}
