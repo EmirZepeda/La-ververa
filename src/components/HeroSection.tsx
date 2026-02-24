@@ -15,8 +15,8 @@ export default function HeroSection() {
     const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
     const textY = useTransform(scrollYProgress, [0, 0.5], [0, -60]);
 
-    // "VERBENA" letters for stagger animation
-    const title = '"VERBENA"';
+    // "LA VERVERA" letters for stagger animation
+    const title = '"LA VERVERA"';
     const letters = title.split("");
 
     return (
@@ -86,7 +86,7 @@ export default function HeroSection() {
                     transition={{ duration: 0.8, delay: 1.2 }}
                     className="font-[family-name:var(--font-inter)] text-lg sm:text-xl text-white/90 leading-relaxed mb-8"
                 >
-                    Significa fiesta popular o feria. Un lugar donde la gente se reúne para
+                    Birra, antojitos de maíz azul, cantaritos, cervezas y más. Un lugar donde la gente se reúne para
                     celebrar, compartir y disfrutar.
                 </motion.p>
 
@@ -105,7 +105,7 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 2 }}
                     className="font-[family-name:var(--font-cormorant)] text-xl sm:text-2xl text-terracotta-light italic"
                 >
-                    Justo como lo hacemos aquí: entre aromas, sabores y sonrisas.
+                    #HazBarrioComeMexicano
                 </motion.p>
 
                 {/* Logo */}

@@ -44,7 +44,7 @@ export default function MenuSection() {
                         />
                         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-bark/80 to-transparent p-6">
                             <h3 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white text-shadow">
-                                Chilaquiles de Olla
+                                Birria de Res
                             </h3>
                         </div>
                     </motion.div>
@@ -68,17 +68,17 @@ export default function MenuSection() {
                 {/* Quote */}
                 <AnimatedSection delay={0.3} className="text-center mb-10">
                     <p className="font-[family-name:var(--font-cormorant)] text-xl sm:text-2xl italic text-clay leading-relaxed">
-                        &ldquo;Donde el maíz criollo encuentra su destino en el barro caliente.&rdquo;
+                        &ldquo;Donde la tradición encuentra su destino en el barro caliente.&rdquo;
                     </p>
                 </AnimatedSection>
 
                 {/* Description */}
                 <AnimatedSection delay={0.35} className="text-center mb-10 max-w-2xl mx-auto">
                     <p className="text-bark-light/80 leading-relaxed text-sm sm:text-base">
-                        Cada bocado es un viaje a las raíces. Nuestros chilaquiles se preparan lentamente en ollas de barro
-                        tradicionales, permitiendo que la salsa verde de tomatillo milpero se infunda profundamente en las
-                        tortillas hechas a mano. Coronado con crema de rancho fresco, queso deshebrado y aguacate
-                        cremoso, este plato no es solo comida, es memoria viva de nuestros abuelos.
+                        Cada bocado es un viaje a las raíces. Nuestra birria se prepara lentamente en ollas de barro
+                        tradicionales con chiles seleccionados y especias ancestrales. Acompañada de tortillas hechas a mano,
+                        cebolla, cilantro y limón. También disfruta nuestros antojitos de maíz azul,
+                        una experiencia que es memoria viva de nuestros abuelos.
                     </p>
                 </AnimatedSection>
 

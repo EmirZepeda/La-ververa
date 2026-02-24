@@ -15,11 +15,11 @@ export default function Footer() {
                     La Ververa
                 </p>
                 <p className="font-[family-name:var(--font-cormorant)] text-cream/40 text-sm italic">
-                    Cocina Ancestral Mexicana
+                    #HazBarrioComeMexicano
                 </p>
                 <div className="mt-6 pt-6 border-t border-cream/10">
                     <p className="text-cream/30 text-xs">
-                        &copy; 2026 La Ververa. Cocina creativa.
+                        &copy; 2026 La Ververa · Puebla, Pue. · Cocina ancestral mexicana.
                     </p>
                 </div>
             </div>

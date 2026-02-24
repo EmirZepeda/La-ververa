@@ -23,10 +23,10 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "La Ververa — Cocina Ancestral Mexicana",
+  title: "La Ververa — Cocina Ancestral Mexicana | Puebla",
   description:
-    "Verbena significa fiesta popular. Un lugar donde la gente se reúne para celebrar, compartir y disfrutar. Cocina ancestral mexicana entre aromas, sabores y sonrisas.",
-  keywords: ["restaurante", "mexicano", "cocina ancestral", "verbena", "la ververa", "chilaquiles", "cantaritos"],
+    "Birria, antojitos de maíz azul, cantaritos, cervezas y más. #HazBarrioComeMexicano. 2 Ote. 208 Centro, Puebla. Mié-Lun 8:30 AM - 3:00 PM.",
+  keywords: ["restaurante", "mexicano", "cocina ancestral", "la ververa", "birria", "cantaritos", "puebla", "maíz azul"],
 };
 
 export default function RootLayout({

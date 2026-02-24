@@ -28,15 +28,15 @@ export default function LocationSection() {
 
                         <div className="flex-1">
                             <h4 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-bark mb-1">
-                                Calle del Sabor #45
+                                2 Ote. 208 Centro
                             </h4>
                             <p className="text-bark-light/60 text-sm mb-2">
-                                Colonia Centro, Ciudad de México
+                                Puebla, Pue.
                             </p>
                             <div className="flex items-center gap-1.5">
                                 <Clock className="w-3.5 h-3.5 text-sage" />
                                 <span className="text-sage text-xs font-medium">
-                                    Abierto hoy: 13:00 - 23:00
+                                    Mié-Lun: 8:30 AM - 3:00 PM · Martes cerrado
                                 </span>
                             </div>
                         </div>
