@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star, Clock, Flame, Zap } from "lucide-react";
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
@@ -32,17 +33,12 @@ export default function MenuSection() {
                         transition={{ type: "spring", stiffness: 300 }}
                         className="relative rounded-3xl overflow-hidden shadow-2xl shadow-bark/15 aspect-[4/3] max-w-lg mx-auto"
                     >
-                        {/* Gradient image placeholder simulating a warm food photo */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#C17A3A] via-[#8B5E3C] to-[#5C4033]" />
-                        <div
-                            className="absolute inset-0 opacity-60"
-                            style={{
-                                backgroundImage: `
-                  radial-gradient(circle at 30% 40%, rgba(255, 200, 100, 0.5) 0%, transparent 40%),
-                  radial-gradient(circle at 70% 60%, rgba(200, 100, 50, 0.4) 0%, transparent 35%),
-                  radial-gradient(circle at 50% 50%, rgba(255, 220, 150, 0.3) 0%, transparent 50%)
-                `,
-                            }}
+                        <Image
+                            src="/images/menu-birria.jpg"
+                            alt="Birria de res en cazuela de barro - platillo principal de La Ververa"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 512px"
                         />
                         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-bark/80 to-transparent p-6">
                             <h3 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white text-shadow">

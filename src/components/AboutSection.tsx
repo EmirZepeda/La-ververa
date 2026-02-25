@@ -1,81 +1,48 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { Home } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
 export default function AboutSection() {
-    const imageRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: imageRef,
-        offset: ["start end", "end start"],
-    });
-
-    const imageScale = useTransform(scrollYProgress, [0, 0.5], [1.15, 1]);
-    const imageY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
-
     return (
         <section id="nosotros" className="py-24 px-6 bg-cream-dark relative overflow-hidden">
             <div className="absolute inset-0 texture-overlay" />
             <AnimatedGradientBlobs variant="cool" opacity={0.4} />
 
             <div className="relative z-10 max-w-4xl mx-auto">
-                {/* Interior Image with clip-path reveal */}
-                <AnimatedSection delay={0.1} direction="up" className="mb-14">
-                    <div
-                        ref={imageRef}
-                        className="relative rounded-3xl overflow-hidden shadow-2xl shadow-bark/20 aspect-[16/10] max-w-2xl mx-auto"
-                    >
-                        <motion.div
-                            style={{ scale: imageScale, y: imageY }}
-                            className="absolute inset-0"
-                        >
-                            {/* Warm interior gradient simulating bamboo/wood restaurant */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-[#D4944F] via-[#A8632A] to-[#6B4226]" />
-                            <div
-                                className="absolute inset-0 opacity-70"
-                                style={{
-                                    backgroundImage: `
-                    radial-gradient(circle at 50% 20%, rgba(255, 220, 150, 0.6) 0%, transparent 40%),
-                    radial-gradient(circle at 30% 60%, rgba(255, 200, 100, 0.3) 0%, transparent 30%),
-                    radial-gradient(circle at 70% 40%, rgba(255, 210, 130, 0.4) 0%, transparent 35%),
-                    linear-gradient(180deg, rgba(100, 60, 20, 0.3) 0%, transparent 30%)
-                  `,
-                                }}
-                            />
-                            {/* Vertical lines simulating bamboo/wood slats */}
-                            <div
-                                className="absolute inset-0 opacity-20"
-                                style={{
-                                    backgroundImage: `repeating-linear-gradient(90deg, rgba(61, 43, 31, 0.3) 0px, transparent 2px, transparent 18px)`,
-                                }}
-                            />
-                            {/* Warm hanging light dots */}
-                            {[25, 40, 55, 70].map((left) => (
-                                <div
-                                    key={left}
-                                    className="absolute top-[15%] w-4 h-4 rounded-full bg-yellow-200/60 blur-sm"
-                                    style={{ left: `${left}%` }}
-                                />
-                            ))}
-                        </motion.div>
 
-                        {/* Overlay with label */}
-                        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-bark/70 to-transparent p-6 sm:p-8">
-                            <span className="inline-block px-3 py-1 rounded-md bg-bark-light/80 text-white/90 text-xs font-semibold uppercase tracking-wider mb-2">
-                                Ambiente
-                            </span>
-                            <h3 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white text-shadow">
-                                Nuestra Casa
-                            </h3>
+                {/* Section header */}
+                <AnimatedSection className="text-center mb-10">
+                    <span className="inline-block px-3 py-1 rounded-md bg-bark-light/10 text-terracotta text-xs font-semibold uppercase tracking-widest mb-3 border border-terracotta/20">
+                        Ambiente
+                    </span>
+                    <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-bark">
+                        Nuestra Casa
+                    </h2>
+                </AnimatedSection>
+
+                {/* Instagram Reel embed */}
+                <AnimatedSection delay={0.15} direction="up" className="mb-14">
+                    <div className="flex justify-center">
+                        <div
+                            className="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl shadow-bark/20 border border-terracotta/10"
+                            style={{ aspectRatio: "9/16" }}
+                        >
+                            <iframe
+                                src="https://www.instagram.com/reel/DTYls-XCcZW/embed/"
+                                className="w-full h-full"
+                                frameBorder="0"
+                                scrolling="no"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                title="La Ververa - Reel de Instagram"
+                            />
                         </div>
                     </div>
                 </AnimatedSection>
 
                 {/* Espíritu de Verbena */}
-                <AnimatedSection delay={0.2} className="max-w-xl mx-auto">
+                <AnimatedSection delay={0.3} className="max-w-xl mx-auto">
                     <div className="flex items-start gap-4 mb-8">
                         <div className="shrink-0 w-12 h-12 rounded-2xl bg-terracotta/10 flex items-center justify-center">
                             <Home className="w-6 h-6 text-terracotta" />

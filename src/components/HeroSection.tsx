@@ -2,7 +2,8 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ChevronDown, Leaf } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
 export default function HeroSection() {
@@ -62,10 +63,10 @@ export default function HeroSection() {
             {/* Content */}
             <motion.div
                 style={{ opacity: textOpacity, y: textY }}
-                className="relative z-10 text-center px-6 max-w-2xl mx-auto"
+                className="relative z-10 text-center px-6 max-w-5xl mx-auto"
             >
                 {/* Staggered letter animation for title */}
-                <h1 className="font-[family-name:var(--font-playfair)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white mb-8 tracking-tight text-shadow">
+                <h1 className="font-[family-name:var(--font-playfair)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white mb-8 tracking-tight text-shadow whitespace-nowrap">
                     {letters.map((letter, i) => (
                         <motion.span
                             key={i}
@@ -119,12 +120,15 @@ export default function HeroSection() {
                     transition={{ duration: 0.8, delay: 2.4, type: "spring" }}
                     className="mt-12 flex flex-col items-center gap-3"
                 >
-                    <div className="w-20 h-20 rounded-full bg-white/95 flex items-center justify-center shadow-xl shadow-black/20">
-                        <Leaf className="w-10 h-10 text-bark" />
+                    <div className="w-24 h-24 rounded-full bg-white/95 flex items-center justify-center shadow-xl shadow-black/20 overflow-hidden p-1">
+                        <Image
+                            src="/images/logo-ververa.png"
+                            alt="Logo La Ververa - Cocina Ancestral Mexicana"
+                            width={88}
+                            height={88}
+                            className="object-contain"
+                        />
                     </div>
-                    <span className="font-[family-name:var(--font-inter)] text-sm font-semibold tracking-[0.3em] text-white/80 uppercase">
-                        La Ververa
-                    </span>
                 </motion.div>
             </motion.div>
 

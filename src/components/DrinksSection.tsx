@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TrendingUp } from "lucide-react";
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import AnimatedGradientBlobs from "./AnimatedGradientBlobs";
 
@@ -38,20 +39,14 @@ export default function DrinksSection() {
                     >
                         {/* Drink Image */}
                         <div className="relative aspect-[4/3] overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#D4944F] via-[#C17A3A] to-[#8B5E3C]" />
-                            <div
-                                className="absolute inset-0 opacity-50"
-                                style={{
-                                    backgroundImage: `
-                    radial-gradient(circle at 40% 50%, rgba(255, 200, 120, 0.5) 0%, transparent 40%),
-                    radial-gradient(circle at 65% 35%, rgba(200, 130, 60, 0.4) 0%, transparent 30%),
-                    radial-gradient(ellipse at 50% 70%, rgba(180, 100, 50, 0.5) 0%, transparent 40%)
-                  `,
-                                }}
+                            <Image
+                                src="/images/cantaritos.jpg"
+                                alt="Cantaritos de la Casa - jarritos de barro con chile y limón"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 448px"
                             />
-                            {/* Two circle shapes simulating clay cups */}
-                            <div className="absolute bottom-6 left-1/2 -translate-x-[60%] w-28 h-28 rounded-full bg-gradient-to-b from-[#A8632A] to-[#6B4226] opacity-60 blur-sm" />
-                            <div className="absolute bottom-4 left-1/2 -translate-x-[30%] w-32 h-32 rounded-full bg-gradient-to-b from-[#C17A3A] to-[#8B5E3C] opacity-50 blur-sm" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-bark/30 to-transparent" />
 
                             {/* Popular badge */}
                             <motion.div

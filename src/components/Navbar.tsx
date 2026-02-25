@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
     { label: "Inicio", href: "#inicio" },
@@ -29,20 +30,24 @@ export default function Navbar() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-                        ? "bg-cream/95 backdrop-blur-md shadow-lg shadow-bark/5"
-                        : "bg-transparent"
+                    ? "bg-cream/95 backdrop-blur-md shadow-lg shadow-bark/5"
+                    : "bg-transparent"
                     }`}
             >
                 <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                     {/* Logo */}
                     <a href="#inicio" className="flex items-center gap-2 group">
                         <motion.div
-                            whileHover={{ rotate: 15 }}
+                            whileHover={{ scale: 1.1 }}
                             transition={{ type: "spring", stiffness: 300 }}
+                            className={`w-8 h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${scrolled ? "bg-terracotta/10" : "bg-white/20"}`}
                         >
-                            <Leaf
-                                className={`w-7 h-7 transition-colors duration-300 ${scrolled ? "text-terracotta" : "text-white"
-                                    }`}
+                            <Image
+                                src="/images/logo-ververa.png"
+                                alt="Logo La Ververa"
+                                width={32}
+                                height={32}
+                                className="object-contain"
                             />
                         </motion.div>
                         <span
